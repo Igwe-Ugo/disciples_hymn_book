@@ -1,5 +1,3 @@
-//import 'widget.dart';
-import 'widget.dart';
 import 'common/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
@@ -166,9 +164,9 @@ class HymnDialog extends StatelessWidget {
                           ],
                         ),
                       ),
-                      HymnTune(
-                        hymnMusicPath: hymnaryModel.hymnMusic,
-                      ),
+                      /*DownloadAudioFile(
+                        audioFilePath: hymnaryModel.hymnMusic,
+                      ),*/
                       Container(
                         alignment: Alignment.bottomRight,
                         child: Column(

@@ -123,8 +123,7 @@ class _DiscipleshipHymnaryHomeState extends State<DiscipleshipHymnaryHome> {
   Future<List<DiscipleshipHymnaryModel>> readJsonData(
       BuildContext context) async {
     final assetBundle = DefaultAssetBundle.of(context);
-    final data =
-        await assetBundle.loadString('assets/json/discipleship_hymnary.json');
+    final data = await assetBundle.loadString('assets/json/discipleship_hymnary.json');
     final list = json.decode(data) as List<dynamic>;
     return list.map((e) => DiscipleshipHymnaryModel.fromJson(e)).toList();
   }

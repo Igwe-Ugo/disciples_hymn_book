@@ -38,8 +38,10 @@ dependencies:
   just_audio: ^0.9.35
   share_plus: ^7.2.1
   provider: ^6.1.1
+  http: ^1.2.1
   shared_preferences: ^2.2.2
   url_launcher: ^6.2.1
+  path_provider: ^2.1.2
   vector_math: any
 dev_dependencies:
   flutter_test:

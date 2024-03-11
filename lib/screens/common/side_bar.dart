@@ -55,7 +55,7 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
                   ),
                   const SizedBox(height: 10.0),
                   Text(
-                    'discipleship hymnary'.toUpperCase(),
+                    "disciples' Hymn book".toUpperCase(),
                     style: const TextStyle(
                         fontSize: 17,
                         color: Colors.white,
@@ -134,16 +134,13 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
   }
 
   Future aboutDialog(BuildContext context) {
-    const String contactEmail = 'info@livingseed.org';
-    const String contactPhoneNumber = '+2347085272812';
+    const String contactEmail = 'discipleshymn@gmail.com';
     final Uri urlForEmail = Uri.parse('mailto:$contactEmail');
-    final Uri urlForTelephone = Uri.parse('tel:$contactPhoneNumber');
-    const String aboutUs =
-        "A careful look at the music played in the Church now shows that the Church is in the wilderness. We are therefore committed to making sure that we bring back the glory of the church through hymns. We are asking that God may visit His saving grace upon our lives and grant us a revival that our land may enter into rest.\n\nIf you have any suggestions or wants to contact us, click the link below or contact us through telephone.\n\nGrace be with you.";
-
+    const String aboutUs = "A careful look at the music played in the Church now shows that the Church is in the wilderness. We are therefore committed to making sure that we bring back the glory of the church through hymns. We are asking that God may visit His saving grace upon our lives and grant us a revival that our land may enter into rest.\n\nIf you have any suggestions or wants to contact us, click the link below or contact us through telephone.\n\nGrace be with you.";
     return showDialog(
       context: context,
       builder: (BuildContext context) => SimpleDialog(
+        insetPadding: const EdgeInsets.all(10.0),
         title: Text(
           'about'.toUpperCase(),
           style: const TextStyle(
@@ -190,47 +187,6 @@ class _DiscipleshipSideBarState extends State<DiscipleshipSideBar> {
                 ),
                 const SizedBox(
                   height: 15,
-                ),
-                ListTile(
-                  onTap: () async {
-                    if (await canLaunchUrl(urlForTelephone)) {
-                      await launchUrl(urlForTelephone);
-                    } else {
-                      debugPrint('Cant;');
-                    }
-                  },
-                  leading: Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: Styles.defaultBlueColor,
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    constraints: const BoxConstraints(
-                      minWidth: 50,
-                      minHeight: 50,
-                    ),
-                    child: const Icon(
-                      Icons.phone,
-                      size: 20,
-                    ),
-                  ),
-                  title: const Text(
-                    'Telephone',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Styles.defaultBlueColor,
-                    ),
-                    textAlign: TextAlign.justify,
-                  ),
-                  subtitle: const Text(
-                    contactPhoneNumber,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                    textAlign: TextAlign.justify,
-                  ),
                 ),
                 ListTile(
                   onTap: () async {
